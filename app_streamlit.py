@@ -56,13 +56,12 @@ model, options = load_artifacts()
 
 # ---------- HERO ----------
 st.markdown(
-    '<div class="hero"><div class="title">📱 Social Media Impact AI</div>'
+    '<div class="hero"><div class="title">📱 Social Media Impact by Roff</div>'
     '<div class="sub">Prediksi dampak media sosial terhadap kehidupan mahasiswa '
     'dalam hitungan detik. Isi profil di sidebar, lalu klik Prediksi.</div></div>',
     unsafe_allow_html=True,
 )
 
-# ---------- SIDEBAR INPUT ----------
 with st.sidebar:
     st.markdown("## 🎛️ Profil Mahasiswa")
     with st.form("input_form"):
@@ -83,7 +82,6 @@ with st.sidebar:
 
         submitted = st.form_submit_button("✨ Prediksi Sekarang")
 
-# ---------- HASIL ----------
 if not submitted:
     c1, c2, c3 = st.columns(3)
     for col, icon, title, text in [
